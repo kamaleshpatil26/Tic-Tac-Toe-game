@@ -1,0 +1,7 @@
+<resources>
+    <string name="manage_notes" />
+    <string name="play_music" />
+    <string name="app_name">TicTacToe</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="full_screen_ad_unit_id">ca-app-pub-3940256099942544~3347511713</string>
+</resources>

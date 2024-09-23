@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8DFFEF84"
+    tools:context=".Home">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gridLayout"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Welcome to the study zone"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_border"
+        android:backgroundTint="#FFFFB1"
+        android:padding="16dp"
+        app:columnCount="2"
+        app:orientation="vertical"
+        app:rowCount="2">
+
+        <!-- Tic Tac Toe -->
+        <LinearLayout
+            android:id="@+id/tic_tac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/Game_1"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_gravity="center"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/tic_tac_toe" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Tic Tac Toe"
+                android:textColor="#201F1F"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Pomodoro Timer -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/Game_2"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_border"
+                android:backgroundTint="@color/purple_200"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pomodoro" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Pomodoro Timer"
+                android:textColor="#201F1F"
+                android:fontFamily="monospace"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <!--        &lt;!&ndash; Study Music &ndash;&gt;-->
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:orientation="vertical">-->
+
+        <!--            &lt;!&ndash;            <ImageView&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:id="@+id/Game_3"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_width="170dp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_height="170dp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_centerInParent="true"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:contentDescription="music_icon_desc" />&ndash;&gt;-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/Game_3"-->
+        <!--                android:layout_width="170dp"-->
+        <!--                android:layout_height="170dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:background="@drawable/round_border"-->
+        <!--                android:backgroundTint="#FF5FA4"-->
+        <!--                android:contentDescription="music_icon_desc"-->
+        <!--                android:scaleType="centerCrop"-->
+        <!--                android:src="@drawable/music_icond" />-->
+
+
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="8dp"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="Study Music"-->
+        <!--                android:textColor="#201F1F"-->
+        <!--                android:textSize="16sp" />-->
+        <!--        </LinearLayout>-->
+
+        <!--        &lt;!&ndash; To-Do Notes &ndash;&gt;-->
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:orientation="vertical">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/Game_4"-->
+        <!--                android:layout_width="170dp"-->
+        <!--                android:layout_height="170dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:background="@drawable/round_border"-->
+        <!--                android:backgroundTint="@color/purple_700"-->
+        <!--                android:scaleType="centerCrop"-->
+        <!--                android:src="@drawable/todo_icon"-->
+        <!--                android:paddingStart="20dp"-->
+        <!--                android:paddingEnd="1dp"-->
+        <!--                android:paddingTop="22dp" />-->
+
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="8dp"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="To-Do Notes"-->
+        <!--                android:textColor="#201F1F"-->
+        <!--                android:textSize="16sp" />-->
+    </androidx.gridlayout.widget.GridLayout>
+
+    </RelativeLayout>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="#8DFFEF84"-->
+<!--    tools:context=".Home">-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="55dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Welcome to the study zone\n if you distract then\n play some mind game "-->
+<!--        android:textSize="26dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:fontFamily="sans-serif-medium"-->
+<!--        android:textColor="#201F1F"/>-->
+
+<!--    <androidx.gridlayout.widget.GridLayout-->
+<!--    android:id="@+id/gridLayout"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_centerInParent="true"-->
+<!--    android:background="#8DFFEF84"-->
+<!--    android:padding="0dp"-->
+<!--    app:layout_anchorGravity="center"-->
+<!--    app:columnCount="2"-->
+<!--    app:rowCount="2">-->
+<!--    &lt;!&ndash; ImageView for Tic Tac Toe &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/Game_1"-->
+<!--        android:layout_width="170dp"-->
+<!--        android:layout_height="170dp"-->
+<!--        android:layout_margin="8dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/tic_tac_toe"-->
+<!--        app:layout_columnSpan="1"-->
+<!--        app:layout_rowSpan="1"-->
+<!--        app:layout_row="0"-->
+<!--        app:layout_column="0" />-->
+
+
+<!--    &lt;!&ndash; ImageView for Pomodoro Timer &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/Game_2"-->
+<!--        android:layout_width="170dp"-->
+<!--        android:layout_height="170dp"-->
+<!--        android:layout_margin="8dp"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/pomodoro2"-->
+<!--        app:layout_columnSpan="1"-->
+<!--        app:layout_rowSpan="1"-->
+<!--        app:layout_row="0"-->
+<!--        app:layout_column="1" />-->
+
+<!--    &lt;!&ndash; ImageView for Item 3 &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/Game_3"-->
+<!--        android:layout_width="170dp"-->
+<!--        android:layout_height="170dp"-->
+<!--        android:layout_margin="8dp"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        android:backgroundTint="#FF5FA4"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/logos"-->
+<!--        app:layout_columnSpan="1"-->
+<!--        app:layout_rowSpan="1"-->
+<!--        app:layout_row="1"-->
+<!--        app:layout_column="0" />-->
+
+<!--    &lt;!&ndash; ImageView for Item 4 &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/Game_4"-->
+<!--        android:layout_width="170dp"-->
+<!--        android:layout_height="170dp"-->
+<!--        android:layout_margin="8dp"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        android:backgroundTint="@color/purple_500"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/logos"-->
+<!--        app:layout_columnSpan="1"-->
+<!--        app:layout_rowSpan="1"-->
+<!--        app:layout_row="1"-->
+<!--        app:layout_column="1" />-->
+
+
+<!--    </androidx.gridlayout.widget.GridLayout>-->
+<!--</RelativeLayout>-->

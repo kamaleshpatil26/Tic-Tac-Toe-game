@@ -1,0 +1,10 @@
+<!-- edit_button.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M3,17.25V21h3.75l13.5-13.5l-3.75-3.75L3,17.25zM20.71,7.29l-3.75-3.75l-0.71,0.71l3.75,3.75L20.71,7.29z"/>
+</vector>

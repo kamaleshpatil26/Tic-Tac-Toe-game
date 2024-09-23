@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pomodoro">
+
+
+    <ImageView
+            android:id="@+id/Clock_0"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="26dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pomodoro" />
+
+
+    <!-- Timer Display -->
+    <TextView
+        android:id="@+id/timer_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Clock_0"
+        android:text="25:00"
+        android:textSize="48sp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp" />
+
+    <!-- SeekBar for Work Duration -->
+    <SeekBar
+        android:id="@+id/work_duration_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="60"
+        android:progress="25"
+        android:layout_below="@id/timer_display"
+        android:layout_marginTop="20dp"
+        android:progressDrawable="@drawable/animated_round_seekbar"
+        android:thumb="@drawable/round_thumb" />
+
+    <TextView
+        android:id="@+id/work_duration_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Work Duration: 25 mins"
+        android:layout_below="@id/work_duration_seekbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Control Buttons -->
+    <LinearLayout
+        android:id="@+id/llb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/work_duration_label"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_border"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="Start"
+            android:clickable="true"
+            android:padding="12dp"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/round_border"
+            android:text="Pause"
+            android:clickable="true"
+            android:padding="12dp"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/round_border"
+            android:text="Reset"
+            android:clickable="true"
+            android:padding="12dp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Additional Buttons -->
+    <Button
+        android:id="@+id/select_sound_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_border"
+        android:text="Select Sound"
+        android:padding="12dp"
+        android:clickable="true"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/stop_sound_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/select_sound_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_border"
+        android:text="Stop Sound"
+        android:padding="12dp"
+        android:clickable="true"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".Pomodoro"-->
+<!--    android:padding="16dp">-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/Game_2"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/pomodoro" />-->
+
+<!--    &lt;!&ndash; Timer display &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/timer_display"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/Game_2"-->
+<!--        android:text="25:00"-->
+<!--        android:textSize="48sp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="8dp" />-->
+<!--    &lt;!&ndash; SeekBar for Work Duration &ndash;&gt;-->
+<!--    <SeekBar-->
+<!--        android:id="@+id/work_duration_seekbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:max="60"-->
+<!--        android:progress="25"-->
+<!--        android:layout_below="@id/timer_display"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:progressDrawable="@drawable/animated_round_seekbar"-->
+<!--        android:thumb="@drawable/round_thumb" />-->
+
+<!--    &lt;!&ndash; SeekBar for Work Duration &ndash;&gt;-->
+<!--    <SeekBar-->
+<!--        android:id="@+id/work_duration_seekbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:max="60"-->
+<!--        android:progress="25"-->
+<!--        android:layout_below="@id/timer_display"-->
+<!--        android:layout_marginTop="20dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/work_duration_label"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Work Duration: 25 mins"-->
+<!--        android:layout_below="@id/work_duration_seekbar"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="8dp" />-->
+
+<!--    &lt;!&ndash; SeekBar for Break Duration &ndash;&gt;-->
+<!--    <SeekBar-->
+<!--        android:id="@+id/break_duration_seekbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:max="15"-->
+<!--        android:progress="5"-->
+<!--        android:layout_below="@id/work_duration_label"-->
+<!--        android:layout_marginTop="20dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/break_duration_label"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Break Duration: 5 mins"-->
+<!--        android:layout_below="@id/break_duration_seekbar"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="8dp" />-->
+
+<!--    &lt;!&ndash; Control Buttons &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/start_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/break_duration_label"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Start" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/pause_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/break_duration_label"-->
+<!--        android:layout_toEndOf="@id/start_button"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Pause" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/reset_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/break_duration_label"-->
+<!--        android:layout_toEndOf="@id/pause_button"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Reset" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/select_sound_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/reset_button"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        android:text="Select Sound" />-->
+
+<!--</RelativeLayout>-->
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".Pomodoro"-->
+<!--    android:padding="16dp">-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/Game_2"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/pomodoro" />-->
+
+<!--    &lt;!&ndash; Timer display &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/timer_display"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/Game_2"-->
+<!--        android:text="25:00"-->
+<!--        android:textSize="48sp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="5dp" />-->
+
+<!--    &lt;!&ndash; SeekBar for Work Duration &ndash;&gt;-->
+<!--    <SeekBar-->
+<!--        android:id="@+id/work_duration_seekbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:max="60"-->
+<!--        android:progress="25"-->
+<!--        android:layout_below="@id/timer_display"-->
+<!--        android:layout_marginTop="20dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/work_duration_label"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Work Duration: 25 mins"-->
+<!--        android:layout_below="@id/work_duration_seekbar"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="10dp" />-->
+
+<!--    &lt;!&ndash; SeekBar for Break Duration &ndash;&gt;-->
+<!--    <SeekBar-->
+<!--        android:id="@+id/break_duration_seekbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:max="15"-->
+<!--        android:progress="5"-->
+<!--        android:outlineSpotShadowColor="@color/teal_200"-->
+<!--        android:layout_below="@id/work_duration_label"-->
+<!--        android:layout_marginTop="20dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/break_duration_label"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Break Duration: 5 mins"-->
+<!--        android:layout_below="@id/break_duration_seekbar"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="10dp" />-->
+
+<!--    &lt;!&ndash; Start Button &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Pause Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/start_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/break_duration_label"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        android:text="Start" />-->
+
+<!--    &lt;!&ndash; Reset Button &ndash;&gt;-->
+
+<!--    <Button-->
+<!--        android:id="@+id/pause_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/break_duration_label"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        android:layout_marginStart="42dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_toEndOf="@+id/start_button"-->
+<!--        android:text="Pause" />-->
+
+<!--    &lt;!&ndash; Select Sound Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/reset_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/break_duration_label"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginStart="42dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_toRightOf="@id/pause_button"-->
+<!--        android:text="Reset" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/select_sound_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/pause_button"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="56dp"-->
+<!--        android:text="Select Sound" />-->
+
+<!--</RelativeLayout>-->
+
+<!--    &lt;!&ndash;<?xml version="1.0" encoding="utf-8"?>&ndash;&gt;-->
+<!--&lt;!&ndash;<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+<!--&lt;!&ndash;    xmlns:tools="http://schemas.android.com/tools"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:background="#FF5FA4"&ndash;&gt;-->
+<!--&lt;!&ndash;tools:context=".Pomodoro"&ndash;&gt;-->
+<!--&lt;!&ndash;android:padding="16dp">&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash; Timer display &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<TextView&ndash;&gt;-->
+<!--&lt;!&ndash;    android:id="@+id/timer_display"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:text="25:00"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:textSize="48sp"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:textColor="#000000"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_marginTop="100dp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash; Start Button &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<Button&ndash;&gt;-->
+<!--&lt;!&ndash;    android:id="@+id/start_button"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:text="Start"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_below="@id/timer_display"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_marginTop="20dp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash; Pause Button &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<Button&ndash;&gt;-->
+<!--&lt;!&ndash;    android:id="@+id/pause_button"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:text="Pause"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_below="@id/start_button"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_marginTop="10dp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash; Reset Button &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<Button&ndash;&gt;-->
+<!--&lt;!&ndash;    android:id="@+id/reset_button"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:text="Reset"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_below="@id/pause_button"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:layout_marginTop="10dp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->

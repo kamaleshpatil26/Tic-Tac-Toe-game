@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="drawer_layout" type="id" />
+    <item name="note_card" type="id" />
+    <item name="imageView" type="id" />
+    <item name="timer_display" type="id" />
+    <item name="work_duration_seekbar" type="id" />
+    <item name="work_duration_label" type="id" />
+    <item name="pause_button" type="id" />
+    <item name="break_duration_label" type="id" />
+    <item name="select_sound_button" type="id" />
+    <item name="reset_button" type="id" />
+    <item name="break_duration_seekbar" type="id" />
+    <item name="start_button" type="id" />
+    <item name="playWithRobotButton" type="id" />
+</resources>

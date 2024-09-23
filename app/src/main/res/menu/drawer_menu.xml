@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_my_notes"
+        android:icon="@drawable/todo_icon"
+        android:title="My Notes"/>
+    <item
+        android:id="@+id/nav_save_notes"
+        android:icon="@drawable/ic_save"
+        android:title="Save Notes"/>
+    <item
+        android:id="@+id/nav_delete"
+        android:icon="@drawable/ic_delete"
+        android:title="Delete"/>
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_share"
+        android:title="Share"/>
+
+</menu>
